@@ -17,7 +17,7 @@ export class SigmetComponent implements OnInit {
   @Input() lat: number 
   @Input() lng: number 
 
-  re = /([A-Z]{4}) (AIRMET|SIGMET|WS WRNG) (\w{1,3})\s?\d{0,6}\s?VALID (\d{6}\/\d{6}) [\s\S]*?(.+?)(?:(\w\d{4} \w\d{5}(?: - )?)*)= NNNN/gm;
+  re = /([A-Z]{4}) (AIRMET|SIGMET|WS WRNG) (\w{1,3})\s?\d{0,6}\s?VALID (\d{6}\/\d{6}) [\s\S]*?(.+?)(?:(\w\d{4} \w\d{5}(?: - )?)*)=/gm;
   positionRe = /(\w\d{4}) (\w\d{5})/gm
   raw  = null;
   leafletMap: Map;
