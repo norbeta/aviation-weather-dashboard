@@ -45,7 +45,7 @@ export class RestService {
   }
   getSigmet(): Observable<any> {
     console.log("Get sigmet");
-    return this.http.get('https://api.met.no/weatherapi/sigmets/1.0/', {responseType: 'text'}).pipe(
+    return this.http.get('https://api.met.no/weatherapi/sigmets/2.0/', {responseType: 'text'}).pipe(
      );
   }
   @Cacheable()
