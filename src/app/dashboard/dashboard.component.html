@@ -2,7 +2,7 @@
   <mat-grid-list [cols]="breakpoint" [rowHeight]="rowHeight" (window:resize)="onResize($event)" >
     <mat-grid-tile [colspan]="'2'" [rowspan]="rowspan" *ngIf="airportService.visible.sigchart">
       <mat-card class="dashboard-card">
-        <img mat-card-image src="https://www.aro.lfv.se/tor/nswc2aro.gif?995457" alt="Swedish sig-WX chart">
+        <img mat-card-image src="https://www.aro.lfv.se/tor/nswc2aro.gif?995457" alt="Swedish sig-WX chart" style="background-color: white">
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="colspan" [rowspan]="'3'"  *ngIf="airportService.visible.sigmet">
