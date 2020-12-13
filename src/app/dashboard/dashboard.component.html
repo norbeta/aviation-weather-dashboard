@@ -29,7 +29,7 @@
     </mat-grid-tile>
     <mat-grid-tile [colspan]="'2'" [rowspan]="'3'" *ngIf="airportService.visible.radar">
       <mat-card class="dashboard-card">
-         <img mat-card-image  src="https://api.met.no/weatherapi/radar/1.5/?radarsite=southeast_norway&type=reflectivity&content=animation&size=normal" frameborder="0">
+         <img mat-card-image  src="https://api.met.no/weatherapi/radar/2.0/?type=fir_preciptype&area=southern_norway&content=animation" frameborder="0">
          </mat-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="'2'" [rowspan]="'3'" *ngIf="airportService.visible.lightning">
