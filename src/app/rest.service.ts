@@ -36,9 +36,10 @@ export class RestService {
   }
   @Cacheable()
   getTaf(id): Observable<any> {
-    let current_datetime = new Date();
-    let formatted_date = current_datetime.getFullYear() + "-" +("0" + (current_datetime.getMonth() + 1)).slice(-2) + "-" + ("0" + current_datetime.getDate()).slice(-2);
-    return this.http.get('https://api.met.no/weatherapi/tafmetar/1.0/?icao='+id+'&content_type=text/xml&date='+formatted_date+'&content=tafmetar',{ responseType: 'text' }).pipe(
+    console.log("Get METAR/TAF")
+    //let current_datetime = new Date();
+    //let formatted_date = current_datetime.getFullYear() + "-" +("0" + (current_datetime.getMonth() + 1)).slice(-2) + "-" + ("0" + current_datetime.getDate()).slice(-2);
+    return this.http.get('https://api.met.no/weatherapi/tafmetar/1.0/?icao='+id+'&content_type=text/xml&content=tafmetar',{ responseType: 'text' }).pipe(
       map((res) => this.parseXml(res)));
     //return this.http.get(endpoint + 'taf/' + id + '?options=&format=json&onfail=cache').pipe(
       //map(this.extractData));
